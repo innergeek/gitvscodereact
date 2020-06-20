@@ -13,16 +13,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Install and Build      
-        run: |        
-          npm install
-          npm run-script build
-          
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
           ACCESS_TOKEN: ${{ secrets.GITVSCODEREACT }}          
           BRANCH: master
           FOLDER: build
+          BUILD_SCRIPT: npm install && npm run build
 
     
