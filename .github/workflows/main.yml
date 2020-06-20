@@ -24,6 +24,5 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.GITVSCODEREACT }}          
           BRANCH: master
           FOLDER: build
-          BUILD_SCRIPT: npm install && npm run build
 
     
